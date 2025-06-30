@@ -26,7 +26,7 @@ while (true)
     if (question.Equals("Ok", StringComparison.OrdinalIgnoreCase))
     {
         Console.WriteLine("Ah, you wish to end this session. Farewell, seeker of knowledge!");
-        Thread.Sleep(1000); // Delay 1 second
+        Thread.Sleep(1500); // Delay 1.5 second
         break;
     }
     if (string.IsNullOrWhiteSpace(question))
@@ -49,5 +49,3 @@ while (true)
         Console.WriteLine("If you wish to ask another question, type it now. If you wish to end this session, type 'Ok'.");
     }
 }
-Console.ReadKey();
-
