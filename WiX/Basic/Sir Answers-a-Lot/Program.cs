@@ -16,12 +16,10 @@ Thread.Sleep(2000); // Delay 2 seconds
 Console.WriteLine("Ask me thy question, noble traveler, and I shall respond with the wisdom of a thousand stars!");
 Thread.Sleep(1000); // Delay 1 second
 
-string question = "";
-
 while (true)
 {
     Console.Write("Type your question here: ");
-    question = Console.ReadLine() ?? "";
+    string question = Console.ReadLine() ?? "";
     Console.Clear();
     if (question.Equals("Ok", StringComparison.OrdinalIgnoreCase))
     {
