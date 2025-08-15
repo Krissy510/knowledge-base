@@ -1,6 +1,6 @@
 # What is WiX?
 
-WiX or its fullname WiX Toolset is a tool that allow us developer to create installer for Windows installer.
+- WiX or its fullname WiX Toolset is a tool that allow us developer to create installer for Windows installer.
 
 # Why use WiX instead of building your own?
 
@@ -22,11 +22,9 @@ WiX or its fullname WiX Toolset is a tool that allow us developer to create inst
   - Indicate dialogs order when installing
   - And more!
 
-# Let's create your first installer
+# Scenario
 
-## Scenario
-
-Your build a console application that will always answers your question with
+You builded a console application that will always answers your question with
 
 - `Yes`
 - `No`
@@ -38,7 +36,7 @@ Let's called it `Sir Answers-a-Lot`.
 
 ### Your goal?
 
-1. We want an installer that install with one click.
+1. We want an installer that install with one click. [Goal 1](Goal-1.md)
 2. We want user to be able to customize where to install the program.
 3. We don't want to get into trouble, so we will also include a user term agreement to avoid lawsuit.
 4. We want to ask user if user want a shortcut or not after finishing installing.
