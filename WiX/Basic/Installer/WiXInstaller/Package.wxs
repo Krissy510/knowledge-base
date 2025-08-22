@@ -1,0 +1,12 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Package		   
+	Name="WiXInstaller" 
+	Manufacturer="TODO Manufacturer" 
+	Version="1.0.0.0"
+	UpgradeCode="3c1d7649-fabe-4734-923a-9c8fb6d06fe9"
+	>
+    <Feature Id="Main">
+      <ComponentGroupRef Id="AppComponents" />
+    </Feature>
+  </Package>
+</Wix>
