@@ -1,4 +1,4 @@
-# GOAL 1: We want an installer that install with one click.
+# GOAL 1: We want an installer that install, that's it.
 
 To achieve this, we will need to first build the project to get the `Sir Answers-a-Lot.exe`.
 
@@ -31,7 +31,7 @@ To achieve this, we will need to first build the project to get the `Sir Answers
 
 - .NET SDK
 
-### Step 1: Creating a base installer
+### Steps
 
 1. Create a new folder called `Installer` (You can change `Installer` with anything you like)
 2. Create a new file in the project called `Installer.wixproj` with the following content
@@ -62,9 +62,7 @@ To achieve this, we will need to first build the project to get the `Sir Answers
    <Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
     <Fragment>
       <ComponentGroup Id="AppComponents" Directory="INSTALLFOLDER">
-        <Component>
           <File Source="..\..\SirAnswers-a-Lot\bin\Release\net9.0\win-x64\publish\SirAnswers-a-Lot.exe" />
-        </Component>
       </ComponentGroup>
     </Fragment>
    </Wix>
@@ -81,10 +79,20 @@ To achieve this, we will need to first build the project to get the `Sir Answers
    </Wix>
    ```
 6. Type `dotnet build` in the installer folder.
-7. Your installer will not located in `bin\Debug` called `WiXInstaller.msi`
-8. The exectuable is located in `Program Files (x86)\TODO Manufacturer WiXInstaller`
+7. Your installer will not located in `bin\Debug` inside the `WiXInstaller` folder called `WiXInstaller.msi`.
+   - You can try run it to see how it looks like.
+   - The exectuable is located in `Program Files (x86)\TODO Manufacturer WiXInstaller`.
+   - To uninstall, you can do that through the normal method in `Installed apps` section the program will be called `WiXInstaller`.
+
+#### Diagram summary
+
+![BasicDiagram](Pics/BasicDiagram.png)
 
 #### Explanations
+
+This section is for explain what each component do and what does each attribute mean in each component simplified.
+
+If you are interested in all detail about each component then I suggested go on the [official documentation](https://docs.firegiant.com/).
 
 ##### Package component
 
@@ -121,3 +129,51 @@ Where:
 - Just like most things, referencing is important to help you manage your source code better by not just having one single file for the whole project.
 - However, to get the content of those located outside of the file referencing is needed.
 - For example, this line here is referencing to a `ComponentGroup` component that has `Id="ExampleComponents"`.
+
+##### Fragment component
+
+```xml
+<Fragment />
+```
+
+- A Fragment component is a container for installer definitions (Example: directories and components).
+- Used to split the installer into smaller, reusable, and maintainable parts.
+- Fragments are referenced from the main product definition and merged at build time.
+
+##### ComponentGroup component
+
+```xml
+<ComponentGroup Id="ComponentsId" Directory="PATH">
+```
+
+- Use for grouping components together.
+- `Id`: Identifier for the `ComponentGroup`. Can be reference using `<ComponentGroupRef>` (Required)
+- `Directory`: Sets the default directory identifier
+
+##### File component
+
+```xml
+<File Source="PATH">
+```
+
+- This component is used to reference a file that you want the installer to contain.
+- This file will be installed to the directory that was reference by the parent component.
+- You can also add `Directory` attributes to this component if this component does not have a parent and you are working on WiX 5 or above. If you don't provide it, but it doesn't have a parent component it will default to use `INSTALLFOLDER` for `Directory`.
+
+##### StandardDirectory component
+
+```xml
+<StandardDirectory Id="StandardDirectoryType">
+```
+
+- `Id` The identifier of the standard directory to include in the package.
+- Here's a [link](https://docs.firegiant.com/wix/schema/wxs/standarddirectorytype/) to what was supported for standard directory.
+
+##### Directory component
+
+```xml
+<Directory Id="Id" Name="Name" />
+```
+
+- `Id` is optional attribute. But in our use case we want it to be use when `INSTALLFOLDER` was referenced.
+- `Name` the name of directory you are expected to mapped to. Both for creation or target as source.
