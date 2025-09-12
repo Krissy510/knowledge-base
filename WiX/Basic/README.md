@@ -34,10 +34,9 @@ You builded a console application that will always answers your question with
 
 Let's called it `Sir Answers-a-Lot`.
 
-### Your goal?
+## Your goal?
 
-1. We want an installer that install with one click. [Goal 1](Goal-1.md)
-2. We want user to be able to customize where to install the program.
-3. We don't want to get into trouble, so we will also include a user term agreement to avoid lawsuit.
+1. We want an installer that install, that's it. [Goal 1](Goal-1.md)
+2. We don't want to get into trouble, so we will include a user term agreement to avoid lawsuit. [Goal 2](Goal-2.md)
+3. We want user to be able to customize where to install the program.[Goal 3](Goal-3.md)
 4. We want to ask user if user want a shortcut or not after finishing installing.
-5. Lastly, we want to make sure if user can uninstall it, if they don't want to use our program anymore 😭.

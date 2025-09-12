@@ -2,7 +2,7 @@
 
 - This folder contain all documenation about WiX toolset in my own version.
 
-# Why your docs over OG docs?
+# Why my docs over OG docs?
 
 1. The tutorial is too long to read.
 2. The documentation is often outdated.
