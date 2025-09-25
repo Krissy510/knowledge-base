@@ -3,8 +3,8 @@
   xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui"
 >
   <Package
-    Name="WiXInstaller"
-    Manufacturer="TODO Manufacturer"
+    Name="SirAnswers-a-lot"
+    Manufacturer="Kris.Raviphas"
     Version="1.0.0.0"
     UpgradeCode="3c1d7649-fabe-4734-923a-9c8fb6d06fe9"
   >
