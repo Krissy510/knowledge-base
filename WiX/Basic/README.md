@@ -39,4 +39,4 @@ Let's called it `Sir Answers-a-Lot`.
 1. We want an installer that install, that's it. [Goal 1](Goal-1.md)
 2. We don't want to get into trouble, so we will include a user term agreement to avoid lawsuit. [Goal 2](Goal-2.md)
 3. We want user to be able to customize where to install the program.[Goal 3](Goal-3.md)
-4. We want to ask user if user want a shortcut or not after finishing installing.
+4. We want to create shortcuts for user. [Goal 4](Goal-4.md)
