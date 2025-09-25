@@ -24,7 +24,7 @@
 
 # Scenario
 
-You builded a console application that will always answers your question with
+You built a console application that will always answers your question with:
 
 - `Yes`
 - `No`
