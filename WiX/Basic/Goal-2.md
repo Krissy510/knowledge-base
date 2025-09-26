@@ -68,4 +68,5 @@ Good news, WiX already have a preset for it so we don't need to build from scrac
    ```
 3. Make sure that you close any process that accessing the rtf file.
 4. Build and run it again. Done!
+
    ![ExampleUserTermUiComplete](Pics/ExampleUserTermUiComplete.png)
