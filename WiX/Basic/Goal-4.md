@@ -70,7 +70,6 @@ That's why our goal this time is to create a shortcut which will resolve this pa
          ...
        </Feature>
      </Package>
-   </Wix>
    ```
 
 8. However, this is just adding the concept of icon, but the installer still does not know where to use this icon. This where you add the icon reference to the shortcuts.
