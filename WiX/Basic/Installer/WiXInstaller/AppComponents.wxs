@@ -1,0 +1,22 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Fragment>
+    <ComponentGroup Id="AppComponents" Directory="INSTALLFOLDER">
+      <File Source="..\..\SirAnswers-a-Lot\bin\Release\net9.0\win-x64\publish\SirAnswers-a-Lot.exe">
+        <Shortcut
+          Id="StartMenuShortcut"
+		  Directory="ProgramMenuFolder"
+          Name="SirAnswers-a-Lot"
+          Advertise="yes"
+          Icon="AppIcon.ico"
+        />
+        <Shortcut
+          Id="DesktopShortcut"
+          Directory="DesktopFolder"
+          Name="SirAnswers-a-Lot"
+          Advertise="yes"
+          Icon="AppIcon.ico"
+        />
+      </File>
+    </ComponentGroup>
+  </Fragment>
+</Wix>
